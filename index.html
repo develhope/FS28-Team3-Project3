@@ -6,16 +6,231 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EA</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
 </head>
 
 <body>
+    
+    <div id="burger-sidebar">
+          <!-- 
+                <div id="burger-cont-header"><a style="margin-left: 36px; margin-right: 38px;"
+                        href="https://www.ea.com/it-it/"><img style="width: 200px;" src="./images/ea-wordmark-network-nav-coral.svg" alt=""></a> 
+                        <div style="height: 20px; width: 20px;">
+                            <svg style="height: 100%; enable-background:new 0 0 16 16 " class="burger-sidebar-close-icon" x="0px"
+                                y="0px" viewBox="0 0 16 16">
+                                <path d="M13.4,11.9l-4-4l3.9-3.9c0.6-0.6,0.7-1.3,0.3-1.7c-0.4-0.4-1.2-0.3-1.7,
+                            0.3L8,6.6l-4-4 C3.5,2.1,2.7,1.9,2.3,2.3C1.9,2.7,2.1,3.5,2.6,4.1l4,
+                            4l-3.9,3.9c-0.6,0.6-0.7,1.3-0.3,1.7c0.4,0.4,1.2,0.3,1.7-0.3L8,9.4l4,
+                            4 c0.6,0.6,1.3,0.7,1.7,0.3C14.1,13.3,13.9,12.5,13.4,11.9z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                <div id="burger-cont-main"></div>
+            
+        </div> -->
+
+    <div class="sidebar sidebar-hidden">
+       
+
+
+        <div id="sidebar-content">
+
+
+
+            <!--Contenuto sidebar sopra i 1024px-->
+            <div id="sidebar-header">
+                <p style="font-weight: 700; font-size: 18px;">Tutti i giochi</p>
+                <div style="height: 20px; width: 20px;">
+                    <svg style="height: 100%; enable-background:new 0 0 16 16 " class="sidebar-close-icon" x="0px"
+                        y="0px" viewBox="0 0 16 16">
+                        <path d="M13.4,11.9l-4-4l3.9-3.9c0.6-0.6,0.7-1.3,0.3-1.7c-0.4-0.4-1.2-0.3-1.7,
+                    0.3L8,6.6l-4-4 C3.5,2.1,2.7,1.9,2.3,2.3C1.9,2.7,2.1,3.5,2.6,4.1l4,
+                    4l-3.9,3.9c-0.6,0.6-0.7,1.3-0.3,1.7c0.4,0.4,1.2,0.3,1.7-0.3L8,9.4l4,
+                    4 c0.6,0.6,1.3,0.7,1.7,0.3C14.1,13.3,13.9,12.5,13.4,11.9z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+            <div>
+                <div class="grid-header">
+                    <img src="images/ea-sidebar-img.png.adapt.crop1x1.767w.png" alt="EA Play">
+                </div>
+                <div class="grid">
+                    <div class="grid-item"><a href=""><img src="images/ea1-sidebar-lil-icon.jpg.adapt.crop1x1.767w.jpg"
+                                alt=""></a></div>
+                    <div class="grid-item item2"><img src="images/ea2-sidebar-lil-icon.png.adapt.crop1x1.767w.png"
+                            alt="Madden 23"></div>
+                    <div class="grid-item item3"><img src="images/ea3-sidebar-lil-icon.jpg.adapt.crop1x1.767w.jpg"
+                            alt="Apex Legends"></div>
+                    <div class="grid-item item5"><img src="images/ea5-sidebar-lil-icon.jpg.adapt.crop1x1.767w.jpg"
+                            alt="Sims 4"></div>
+                    <div class="grid-item item4"><img src="images/ea4-sidebar-lil-icon.jpg.adapt.crop1x1.767w.jpg"
+                            alt="Battlefield"></div>
+                    <div class="grid-item item6"><img src="images/ea6-sidebar-lil-icon.jpg.adapt.crop1x1.767w.jpg"
+                            alt="FIFA 23"></div>
+                </div>
+            </div>
+            <div id="spacing-div"></div>
+        </div>
+    </div>
+
     <header>
+        <nav id="first-nav">
+            <div id="first-nav-cont" class="flex">
 
+                <div style="height: 25px;"><a href=""><img class="firstnav-logo" style="height: 100%;"
+                            src="./images/profile-simple-svgrepo-com.svg" alt=""></a></div>
+                <div style="height: 25px;"><a href=""><img class="firstnav-logo" style="height: 100%;"
+                            src="./images/question-svgrepo-com (1).svg" alt=""></a></div>
+                <div style="height: 25px;"><a href=""><img class="firstnav-logo"
+                            style="height: 100%; background-color: inherit;" src="./images/ea-svgrepo-com.svg" alt=""></a></div>
+            </div>
 
+        </nav>
     </header>
 
     <main>
 
+        <div class="second-nav">
+            <div id="sec-nav-div" class="flex">
+
+                <!--Hamburger button per la sidebar sotto i 1024px-->
+                <div role="button" id="burger-sidebar-btn">
+                    <img style="height: 25px;" src="./images/burger-menu-svgrepo-com.svg" alt="">
+                </div>
+
+                <!--Three-dots-icon button per la sidebar sopra i 1024px-->
+                <div role="button" id="sidebar-btn">
+                    <img style="height: 25px;" src="./images/three-dots-vertical-svgrepo-com.svg" alt="">
+                </div>
+
+                <a style="margin-left: 36px; margin-right: 38px;" href="https://www.ea.com/it-it/"><img
+                        src="ea-wordmark-network-nav-coral.svg" alt=""></a>
+
+            </div>
+
+            <div class="flex gap20px">
+                <div class="dropdown">
+                    <div role="button" class="dropbtn flex">GIOCHI <div class="arrow-div"><span
+                                id="dropdown-arrow-left"></span><span style="right: 1px;"
+                                id="dropdown-arrow-right"></span></div>
+                        <div class="dropdown-content padding-first-drpdwn">
+                            <div class="content-column">
+                                <p style="color: black;" class="drp-content-header">ESPLORA I GIOCHI</p>
+                                <a href=""> Ultimi giochi</a>
+                                <a href=""> Prossimamente</a>
+                                <a href="">Giochi gratuiti</a>
+                                <a href=""> EA SPORTS</a>
+                                <a href=""> EA Originals</a>
+                                <a href=""> Libreria dei giochi</a>
+                                <a href=""> Offerte EA app</a>
+                            </div>
+                            <div class="content-column" style="padding-left: 60px;">
+                                <p style="color: black;" class="drp-content-header">PIATTAFORME</p>
+                                <a href="">PC</a>
+                                <a href=""> PlayStation</a>
+                                <a href=""> Xbox</a>
+                                <a href=""> Nintendo Switch™</a>
+                                <a href=""> Dispositivi mobili</a>
+                                <a href=""> Pogo</a>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <div role="button" class="dropbtn flex">ESPERIENZE <div class="arrow-div"><span
+                                id="dropdown-arrow-left"></span><span id="dropdown-arrow-right"></span></div>
+                        <div class="dropdown-content padding-other-drpdwn">
+                            <div class="content-column">
+                                <a href=""> Per EA app</a>
+                                <a href=""> EA Play</a>
+                                <a href=""> Competizioni videoludiche</a>
+                                <a href=""> Test di gioco</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="dropdown">
+                    <div role="button" class="dropbtn flex">INFORMAZIONI<div class="arrow-div"><span
+                                id="dropdown-arrow-left"></span><span id="dropdown-arrow-right"></span></div>
+                        <div class="dropdown-content padding-other-drpdwn">
+                            <div class="content-column">
+                                <a href="">Società</a>
+                                <a href=""> Lavora con noi</a>
+                                <a href=""> Notizie</a>
+                                <a href=""> Tecnologia</a>
+                                <a href=""> EA Studios </a>
+                                <a href=""> Partner EA</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="dropdown">
+                    <div role="button" class="dropbtn flex">IMPEGNI <div class="arrow-div"><span
+                                id="dropdown-arrow-left"></span><span id="dropdown-arrow-right"></span></div>
+                        <div class="dropdown-content padding-other-drpdwn">
+                            <div class="content-column">
+                                <a href=""> I nostri impegni</a>
+                                <a href="">Gioco positivo</a>
+                                <a href="">Diversità e inclusione </a>
+                                <a href="">Impatto sociale</a>
+                                <a href="">Persone e cultura</a>
+                                <a href="">Ambiente</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="dropdown">
+                    <div role="button" class="dropbtn flex">RISORSE <div class="arrow-div"><span
+                                id="dropdown-arrow-left"></span><span id="dropdown-arrow-right"></span></div>
+                        <div class="dropdown-content padding-other-drpdwn">
+                            <div class="content-column">
+                                <a href=""> Aiuto</a>
+                                <a href=""> Forum</a>
+                                <a href=""> Filtro famiglia</a>
+                                <a href=""> Accessibilità</a>
+                                <a href=""> Stampa</a>
+                                <a href=""> Investitori</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div>
+            <div class="container">
+                <div class="image-desc">
+                    <div class="img-desc-div">
+                        <img id="dragon-logo" src="images/dragon logo.png" alt="">
+                    </div>
+                    <div id="img-desc-div">
+                        <span id="img-desc-div-span">Raduna
+                            l'Egida del Velo e sfida gli dei in un coinvolgente GDR da giocare in solitaria.</span>
+                    </div>
+                    <div class="img-desc-div">
+                        <div class="button-container">
+                            <button id="cover-button" type="submit">La tua lista dei
+                                desideri</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
     </main>
 
