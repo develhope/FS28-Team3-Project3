@@ -1,0 +1,144 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding: 0 8%;
+}
+
+.text {
+  font-family: "Electronic Arts Text", Arial, Helvetica, sans-serif;
+  font-size: 35px;
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+.container-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  gap: 5rem;
+  aspect-ratio: 1/1;
+  transition: opacity 0.3s;
+}
+
+.card1 {
+  background-image: url("https://media.contentapi.ea.com/content/dam/gin/images/2023/09/ufc-5-keyart.jpg.adapt.crop1x1.767p.jpg");
+}
+
+.card2 {
+  background-image: url("https://media.contentapi.ea.com/content/dam/gin/images/2023/07/fc24.jpeg.adapt.crop1x1.767p.jpeg");
+}
+
+.card3 {
+  background-image: url("https://media.contentapi.ea.com/content/dam/gin/images/2023/02/f123-gametile-16x9.jpg.adapt.crop1x1.767p.jpg");
+}
+
+.card4 {
+  background-image: url("https://media.contentapi.ea.com/content/dam/gin/images/2022/10/nfs-unbound-1x1.png.adapt.crop1x1.767p.png");
+}
+
+.card5 {
+  background-image: url("https://media.contentapi.ea.com/content/dam/gin/images/2017/01/the-sims-4-keyart.jpg.adapt.crop1x1.767p.jpg");
+}
+
+.card6 {
+  background-image: url("https://media.contentapi.ea.com/content/dam/gin/images/2019/01/apex-legends-keyart.jpg.adapt.crop1x1.767p.jpg");
+}
+
+.logo {
+  max-width: 40%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.card:hover .logo {
+  transform: translateY(-50px);
+  opacity: 2;
+}
+
+.gradient {
+  background-color: black;
+  opacity: 0.8;
+  height: 100%;
+  width: 100%;
+}
+
+.gradient:hover {
+  background-image: linear-gradient(
+    to right,
+    rgb(32, 0, 255, 0.5),
+    rgba(220, 0, 0, 0.5),
+    rgba(230, 38, 38, 0.5)
+  );
+  cursor: pointer;
+}
+
+.logo-p {
+  display: none;
+  color: white;
+  font-size: large;
+}
+
+.card:hover .logo-p {
+  display: block;
+  margin-top: 20px;
+  position: absolute;
+}
+
+.button {
+  background-color: white;
+  border: 2px solid black;
+  color: black;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 40px;
+  cursor: pointer;
+  transition-duration: 0.1s;
+}
+
+.button:hover {
+  background-color: white;
+  cursor: pointer;
+  padding: 18px 27px;
+}
+
+.button:active {
+  background-color: white;
+}
+
+.flex-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 30vh;
+}
+
+.size {
+  height: 100px;
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .container-card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    gap: 2rem;
+  }
+}
