@@ -1,173 +1,193 @@
-
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;}
-  :root {
-  
-      --bgcolor: #f3f3f3;
-  }
-  
-  body {
-      background-color: var(--bgcolor);
-      border: none;
-      margin: 0;
-  }
-  
-  .whiteSection {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 10vh;
-      color: black;
-      background-color: rgb(243, 243, 243);
-      border: none;
-      margin: 0;
-      width: 100%;
-  }
-  
-  .news {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  }
-  
-  
-  
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+
+  --bgcolor: #f3f3f3;
+}
+
+body {
+  background-color: var(--bgcolor);
+  border: none;
+  margin: 0;
+}
+
+.whiteSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  color: black;
+  background-color: rgb(243, 243, 243);
+  border: none;
+  margin: 0;
+  width: 100%;
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.navScrollArea {
+  display: none;
+  justify-content: space-between;
+}
+
+
+.toggleButton {
+  display: flex;
+  align-items: center;
+  height: 8vh;
+  padding: 10px;
+  border: none;
+  font-weight: 200;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000000;
+  cursor: pointer;
+}
+
+.toggleButton:hover {
+  background-color: rgb(29, 29, 29);
+  color: rgb(202, 202, 202);
+}
+
+
+.cardArea {
+  display: block;
+  max-width: 72vw;
+}
+
+.newsCard {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  color: #000000;
+  overflow: hidden;
+  margin: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 2px #585858;
+  transition: box-shadow 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+}
+
+.newsCard:hover {
+  transform: translate(0, -10px);
+  box-shadow: 0 10px 15px #585858;
+}
+
+
+.newsCard .cardImg {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardImg img {
+  width: 100%;
+  height: 100%;
+  max-width: fit-content;
+  object-fit: contain;
+}
+
+.cardText {
+  margin: 5%;
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 60px;
+}
+
+.cardText div {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.cardText div {
+  font-weight: 600;
+}
+
+.cardText .title {
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.cardText .author {
+  color: rgb(255, 42, 42);
+}
+
+
+.news button {
+  background-color: var(--bgcolor);
+  border: 2px solid black;
+  color: black;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 40px;
+  cursor: pointer;
+  transition-duration: 0.1s;
+}
+
+.news button:hover {
+  cursor: pointer;
+  padding: 18px 27px;
+}
+
+.flex-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 30vh;
+}
+
+.cardArea section {
+  display: none;
+}
+
+#eaNews {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: none;
+  object-fit: cover;
+}
+
+#sportNews,
+#apexNews,
+#simsNews,
+#swNews,
+#f1News,
+#battlefieldNews,
+#nfsNews {
+  grid-template-columns: repeat(3, 1fr);
+  border: none;
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+
   .navbar {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-  }
-  
-  .navScrollArea {
-      display: none;
-      justify-content: space-between;
-  }
-  
-  
-  .toggleButton {
-      display: flex;
-      align-items: center;
-      height: 8vh;
-      padding: 10px;
-      border: none;
-      font-weight: 200;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #000000;
-      cursor: pointer;
-  }
-  
-  .toggleButton:hover {
-      background-color: rgb(29, 29, 29);
-      color: rgb(202, 202, 202);
-  }
-  
-  
-  .cardArea {
-      display: block;
-      max-width: 72vw;
-  }
-  
-  .newsCard {
-      display: flex;
-      flex-direction: column;
-      background-color: #ffffff;
-      color: #000000;
       overflow: hidden;
-      margin: 10px;
-      cursor: pointer;
-      box-shadow: 0 2px 2px #585858;
-      transition: box-shadow 0.4s ease-in-out;
-      transition: transform 0.4s ease-in-out;
   }
-  
-  .newsCard:hover {
-      transform: translate(0, -10px);
-      box-shadow: 0 10px 15px #585858;
-  }
-  
-  
-  .newsCard .cardImg {
-      width: 100%;
-      height: 200px;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-  
-  .cardImg img {
-      width: 100%;
-      height: 100%;
-      max-width: fit-content;
-      object-fit: contain;
-  }
-  
-  .cardText {
-      margin: 5%;
-      font-size: 18px;
-      font-weight: 600;
-      padding-bottom: 60px;
-  }
-  
-  .cardText div {
-      display: flex;
-      flex-direction: row;
-      gap: 15px;
-  }
-  
-  .cardText div {
-      font-weight: 600;
-  }
-  
-  .cardText .title {
-      font-family: Verdana, Helvetica, Arial, sans-serif;
-      font-size: 21px;
-      font-weight: 600;
-  }
-  
-  .cardText .author {
-      color: rgb(255, 42, 42);
-  }
-  
-  
-  .news button {
-      background-color: var(--bgcolor);
-      border: 2px solid black;
-      color: black;
-      padding: 16px 24px;
-      font-size: 16px;
-      font-weight: 500;
-      margin: 40px;
-      cursor: pointer;
-      transition-duration: 0.1s;
-  }
-  
-  .news button:hover {
-      cursor: pointer;
-      padding: 18px 27px;
-  }
-  
-  .flex-button {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 30vh;
-  }
-  
-  .cardArea section {
-      display: none;
-  }
-  
-  #eaNews {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border: none;
-      object-fit: cover;
-  }
-  
+
+  #eaNews,
   #sportNews,
   #apexNews,
   #simsNews,
@@ -175,824 +195,841 @@
   #f1News,
   #battlefieldNews,
   #nfsNews {
-      grid-template-columns: repeat(3, 1fr);
-      border: none;
-      object-fit: cover;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      padding: 1rem;
   }
-  
-  @media (max-width: 1024px) {
-  
-      .navbar {
-          overflow: hidden;
-      }
-  
-      #eaNews,
-      #sportNews,
-      #apexNews,
-      #simsNews,
-      #swNews,
-      #f1News,
-      #battlefieldNews,
-      #nfsNews {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 1rem;
-          padding: 1rem;
-      }
-  }
-  
-  @media (max-width: 768px) {
-  
-      .cardArea {
-          display: block;
-          max-width: 100%;
-          
-      }
-  
-      .newsCard .cardImg {
-          display: none;
-      }
-  
-      #eaNews,
-      #sportNews,
-      #apexNews,
-      #simsNews,
-      #swNews,
-      #f1News,
-      #battlefieldNews,
-      #nfsNews {
-          grid-template-columns: 1fr;
-          gap: 1rem;
-          padding: 1rem;
-      }
-  }
-  
-  
-  body {
-    background-color: white;
-    margin: 0;
-    height: 800vh;
-  
-  }
-  
-  main {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  
-  .contenitore {
-    display: flex;
-    background: linear-gradient(100deg, #04042380, #4c040480),
-      url("images/contenitore1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    justify-content: start;
-    width: 100%;
-    padding: 10rem 20vw;
-  }
-  
-  .contenuti {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    font-family: "Electronic Arts Text";
-    color: white;
-    font-size: 20px;
-    max-width: 50%;
-  }
-  
-  .logo {
-    display: flex;
-    max-width: 250px;
-  }
-  
-  p {
-    display: flex;
-    line-height: 25px;
-    font-size: 18px;
-  }
+}
 
-  .sub-now{
-    padding: 10px 30px;
-    font-size: 16px;
+
+
+
+body {
+  background-color: white;
+  margin: 0;
+  height: 800vh;
+
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.contenitore {
+  display: flex;
+  background: linear-gradient(100deg, #04042380, #4c040480),
+      url("images/contenitore1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-content: start;
+  width: 100%;
+  padding: 10rem 20vw;
+}
+
+.contenuti {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: "Electronic Arts Text";
+  color: white;
+  font-size: 20px;
+  max-width: 50%;
+}
+
+.logo {
+  display: flex;
+  max-width: 250px;
+}
+
+p {
+  display: flex;
+  line-height: 25px;
+  font-size: 18px;
+}
+
+.sub-now {
+  padding: 10px 30px;
+  font-size: 16px;
   cursor: pointer;
   background-color: transparent;
   border-radius: 4px;
   display: flex;
-  }
+}
 
-  .sub-now:hover{
-     padding: 12px 35px;
-    }
-  
-  .learn-more-btn {
-    padding: 4px 50px;
-      font-size: 16px;
-    cursor: pointer;
-    background-color: transparent;
-    border-radius: 4px;
-    display: flex;
-   
-  }
+.sub-now:hover {
+  padding: 12px 35px;
+}
 
-  .learn-more-btn:hover {
-    padding: 8px 55px;
-  }
-  
-  
-  .dark {
-    color: white;
-    border: 2px solid white;
-  }
-  .light {
-    color: black;
-    border: 2px solid black;
-  }
-  
- 
-  .contenuti-finali {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    background-color: rgb(120, 184, 221);
-    font-family: "Electronic Arts Text";
-    font-size: 15px;
-    height: 100px;
-    padding-right: 50px;
-    padding-left: 30px;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .contenuti-finali {
-      flex-direction: column;
-      align-items: center;
-    }
-    h2 {
-      text-align: center;
-    }
-  
-    .contenitore {
-      background: url(images/contenitore2.jpg);
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .contenuti {
-      margin-top: 70%;
-      max-width: 100%;
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    .bottone {
+.learn-more-btn {
+  padding: 4px 50px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 4px;
+  display: flex;
+
+}
+
+.learn-more-btn:hover {
+  padding: 8px 55px;
+}
+
+
+.dark {
+  color: white;
+  border: 2px solid white;
+}
+
+.light {
+  color: black;
+  border: 2px solid black;
+}
+
+
+.contenuti-finali {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  background-color: rgb(120, 184, 221);
+  font-family: "Electronic Arts Text";
+  font-size: 15px;
+  height: 100px;
+  padding-right: 50px;
+  padding-left: 30px;
+}
+
+
+@media screen and (max-width: 480px) {
+  .bottone {
       padding: 12px 160px;
-    }
-  
-    .contenitore {
+  }
+
+  .contenitore {
       align-items: center;
-    }
-    .contenuti {
+  }
+
+  .contenuti {
       max-width: 100%;
       margin-top: 90%;
       align-items: center;
-    }
-    p {
+  }
+
+  p {
       text-align: center;
-    }
   }
-  
-  .terms-contain {
-    margin: 50px 50px 0;
-    font-family: "Electronic Arts Text";
-    display: flex;
-    flex-direction: row;
-  }
-  
-  a {
-    text-decoration: none;
-    color: red;
-  }
-  
-  #first-nav {
-    background-color: black;
-    padding: 5px 0;
-    width: 100%;
-    position: sticky;
-    z-index: 1;
-    display: flex;
-    justify-content: end;
-    top: 0;
-    transition: top 0.3s;
-  }
-  
-  #first-nav-cont {
-    gap: 30px;
-    padding-right: 20px;
-  }
-  
-  .first-nav > a:hover .firstnav-logo {
-    fill: a3a3a3;
-  }
-  
-  .second-nav {
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    margin-left: 17px;
-  }
-  
-  #sec-nav-div {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 0;
-  }
-  
-  .container {
-    display: flex;
-    align-items: start;
-    justify-content: center;
-    flex-direction: column;
-    margin: 0;
-    color: white;
-    background-image: url("images/dragon-age.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    max-height: fit-content;
-  }
-  
-  
-  .image-desc {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 50%;
-    min-width: 35%;
-    max-width: 35%;
-    position: relative;
-    overflow: hidden;
-    padding: 10%;
-  
-  }
-  
-  #dragon-logo {
-    max-height: 100%;
-    max-width: 100%;
-  }
-  
-  #img-desc-div {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  #img-desc-div-span {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 22px;
-  }
-  
-  #cover-button {
-    padding: 15px 35px;
-    background-color: #fca00d;
-    color: white;
-    border: 0.1em solid #fca00d;
-    border-radius: 3px;
-    font-size: 20px;
-    transition: ease-in-out 0.1s;
-    font-size: 18px;
-  }
-  
-  #cover-button:hover {
-    padding: 18px 38px;
-    cursor: pointer;
-  }
-  
-  .button-container {
-    min-height: 60px;
-    margin-top: 0.5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 300px;
-    margin-top: 25px;
-    position: relative;
-  }
-  
-  button:hover {
-    padding: 40px 15px 40px 15px;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  
-  .sidebar {
-    display: block;
-  
-    max-width: 27vw;
-    z-index: 1;
-    position: fixed;
-    background-color: white;
-    top: 0;
-    bottom: 0;
-    padding: 100px 30px 0 30px;
-    overflow-y: scroll;
-  }
-  
-  .sidebar::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .sidebar div {
-    border: 2px solid black;
-  }
-  
-  .sidebar-hidden {
-    display: none;
-  }
-  
-  #sidebar-content {
-    display: flex;
-    flex-direction: column;
-    min-width: 100%;
-    min-height: 100%;
-  }
-  
-  #sidebar-header {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: space-between;
-    min-width: auto;
-  }
-  
-  .grid-header img {
-    min-width: 100%;
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .grid {
-    min-width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-  }
-  
-  .grid-item img {
-    width: 100%;
-    height: min-content;
-    border: 1px solid #ddd;
-  
-    aspect-ratio: 1/1;
-  }
-  
-  #spacing-div {
-    height: 100%;
-    background-color: white;
-    padding-bottom: 100px;
-  }
-  
-  .sidebar-close-icon:hover {
-    cursor: pointer;
-    fill: #fca00d;
-  }
-  
-  #sidebar-btn {
-    width: fit-content;
-    height: fit-content;
-    background-color: inherit;
-    border: none;
-  }
-  
-  #sidebar-btn:hover {
-    cursor: pointer;
-  }
-  
-  .flex {
-    display: flex;
-    text-align: center;
-    align-items: center;
-  }
-  
-  .flex-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .flex-start {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-  }
-  
-  .flex-dir-row {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  
-  .flex-dir-column {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  .dropdown {
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    border: none;
-    appearance: none;
-    display: inline-block;
-  }
-  
-  #dropdown-arrow-left {
-    height: 0.1em;
-    width: 0.5em;
-    background-color: black;
-    transform: rotate(45deg);
-    margin-right: -4%;
-    position: relative;
-    transition: ease-in-out 0.2s;
-  }
-  
-  #dropdown-arrow-right {
-    height: 0.1em;
-    width: 0.5em;
-    background-color: black;
-    transform: rotate(-45deg);
-    position: relative;
-    transition: ease-in-out 0.2s;
-  }
-  
-  .arrow-div {
-    position: relative;
-    display: contents;
-  }
-  
-  .dropbtn {
-    background-color: inherit;
-    color: black;
-    padding: 16px;
-    font-size: 17px;
-    border: none;
-    size: 0.5em;
-    justify-content: space-between;
-  }
-  
-  .dropbtn:hover #dropdown-arrow-left {
-    height: 0.1em;
-    width: 0.5em;
-    background-color: black;
-    transform: rotate(-45deg);
-    background-color: #fca00d;
-  }
-  
-  .dropbtn:hover #dropdown-arrow-right {
-    height: 0.1em;
-    width: 0.5em;
-    background-color: black;
-    transform: rotate(45deg);
-    background-color: #fca00d;
-  }
-  
-  /* Hai usato due volte la proprietà display - display relative non è un valore valido */
-  .dropdown {
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 100px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    border-radius: 5px;
-    margin-top: 40px;
-  }
-  
-  .padding-first-drpdwn {
-    padding: 30px 35px 30px 35px;
-  }
-  
-  .padding-other-drpdwn {
-    padding: 10px 25px;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 10px 0;
-    text-decoration: none;
-    display: block;
-    font-size: 15px;
-  }
-  
-  .dropbtn:hover {
-    cursor: pointer;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {
-    color: #fca00d;
-  }
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
-    display: flex;
-    flex-direction: row;
-    top: 50px;
-  }
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {
-    color: #fca00d;
-    animation: 0.2s;
-    transition: all 0.2s;
-  }
-  
-  .content-column a {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-  }
-  
-  .drp-content-header {
-    font-weight: 700;
-    font-size: 15px;
-    border-bottom: 2px solid rgb(171, 169, 169);
-    padding-bottom: 5px;
-  }
-  
-  .sidebar-btn:hover {
-    cursor: pointer;
-  }
-  
-  #burger-sidebar-btn {
-    display: none;
-  }
-  
-  /* Attenzione nelle media query non c'è bisogno di riscrivere tutto, solo le proprietà che cambiano, esempio il menu che scompare */
-  @media screen and (max-width: 1024px) {
-    .dropdown {
-      display: none;
-    }
-    /* 
-      #sidebar{
-          display: none;
-      }
-      #sidebar-btn {
-          display: none;
-      }
-     
-      #burger-sidebar-btn {
-          display: block;
-      }
-      
-      .sidebar-close-icon:hover {
-          cursor: pointer;
-          fill: #FCA00D;
-      }
-      
-      .burger-sidebar-hidden {
-          display: none;
-      }
-  
-      #burger-cont-header {
-          display: flex;
-        
-          flex: 0 1 auto;
-      }
-  
-      #burger-sidebar {
-          display: block;
-  
-          min-width: 35vw;
-          max-width: 35vw;
-          z-index: 1;
-          position: fixed;
-          background-color: white;
-          top: 0;
-          bottom: 0;
-          padding-top: 50px;
-          overflow-y: scroll;
-          //Aggiungi questa riga per abilitare lo scrolling 
-      }
-  
-      #burger-content {
-          display: block;
-      }  */
-  
-    /* .image-desc {
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-          justify-content: center;
-          min-height: 100%;
-          min-width: 35%;
-      
-          position: relative;
-          overflow: hidden;
-          padding: 13% 70% 13% 10%;
-      } */
-  }
-  .games-container {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    padding: 0 8%;
-  }
-  
-  
-  #last-games-btn {
-      background-color: white;
-      border: 2px solid black;
-      color: black;
-      padding: 16px 24px;
-      font-size: 16px;
-      font-weight: 500;
-      margin: 40px;
-      cursor: pointer;
-      transition-duration: 0.1s;
-    }
-  
-    #last-games-btn:hover{
-      background-color: white;
-      cursor: pointer;
-      padding: 18px 27px;
-    }
-  
-  .text {
-    font-family: "Electronic Arts Text", Arial, Helvetica, sans-serif;
-    font-size: 35px;
-    margin-top: 2rem;
-    font-weight: bold;
-  }
-  
-  .container-card {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    justify-content: center;
-    gap: 2rem;
-  }
-  
-  .card {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    gap: 5rem;
-    aspect-ratio: 1/1;
-    transition: opacity 0.3s;
-  }
-  
-  .card1 {
-    background-image: url("https://media.contentapi.ea.com/content/dam/gin/images/2023/09/ufc-5-keyart.jpg.adapt.crop1x1.767p.jpg");
-  }
-  
-  .card2 {
-    background-image: url("https://media.contentapi.ea.com/content/dam/gin/images/2023/07/fc24.jpeg.adapt.crop1x1.767p.jpeg");
-  }
-  
-  .card3 {
-    background-image: url("https://media.contentapi.ea.com/content/dam/gin/images/2023/02/f123-gametile-16x9.jpg.adapt.crop1x1.767p.jpg");
-  }
-  
-  .card4 {
-    background-image: url("https://media.contentapi.ea.com/content/dam/gin/images/2022/10/nfs-unbound-1x1.png.adapt.crop1x1.767p.png");
-  }
-  
-  .card5 {
-    background-image: url("https://media.contentapi.ea.com/content/dam/gin/images/2017/01/the-sims-4-keyart.jpg.adapt.crop1x1.767p.jpg");
-  }
-  
-  .card6 {
-    background-image: url("https://media.contentapi.ea.com/content/dam/gin/images/2019/01/apex-legends-keyart.jpg.adapt.crop1x1.767p.jpg");
-  }
-  
-  .logo {
-    max-width: 40%;
-    cursor: pointer;
-    transition: 0.5s;
-  }
-  
-  .card:hover .logo {
-    transform: translateY(-50px);
-    opacity: 2;
-  }
-  
-  .gradient {
-    background-color: black;
-    opacity: 0.8;
-    height: 100%;
-    width: 100%;
-  }
-  
-  .gradient:hover {
-    background-image: linear-gradient(
-      to right,
-      rgb(32, 0, 255, 0.5),
-      rgba(220, 0, 0, 0.5),
-      rgba(230, 38, 38, 0.5)
-    );
-    cursor: pointer;
-  }
-  
-  .logo-p {
-    display: none;
-    color: white;
-    font-size: large;
-  }
-  
-  .card:hover .logo-p {
-    display: block;
-    margin-top: 20px;
-    position: absolute;
-  }
-  
-  
-  
-  
-  
-  
-  .flex-button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 30vh;
-  }
-  
-  .size {
-    height: 100px;
-    width: 100px;
-    margin-bottom: 20px;
-  }
-  
-  
-  #more-detail{
-      height: 50px;
-      width: 100%;
-      margin-top: 30px;
+}
+
+.terms-contain {
+  margin: 50px 50px 0;
+  font-family: "Electronic Arts Text";
+  display: flex;
+  flex-direction: row;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}
+
+#first-nav {
+  background-color: black;
+  padding: 5px 0;
+  width: 100%;
+  position: sticky;
+  z-index: 1;
+  display: flex;
+  justify-content: end;
+  top: 0;
+  transition: top 0.3s;
+}
+
+#first-nav-cont {
+  gap: 30px;
+  padding-right: 20px;
+}
+
+.first-nav>a:hover .firstnav-logo {
+  fill: a3a3a3;
+}
+
+.second-nav {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-left: 17px;
+}
+
+#sec-nav-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+#container {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+  color: white;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-height: fit-content;
+  
+
+}
+
+
+#image-desc {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  float: top;
+  overflow: hidden;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  #container {
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      flex-direction: column;
+      margin: 0;
+      color: white;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      max-height: fit-content;
+  
+  }
+  
+  
+  #image-desc {
       display: flex;
       align-items: center;
+      flex-direction: column;
       justify-content: center;
+  position: relative;
+      float: top;
+      overflow: hidden;
+      background-color: black;
   }
-  #more-detail-btn {
-    background-color: white;
-    border: 2px solid black;
-    color: black;
-    padding: 2px 32px;
-      font-size: 16px;
-    font-weight: 500;
-    margin: 40px;
-    cursor: pointer;
-    transition-duration: 0.1s;
+
+  .cardArea {
+      display: block;
+      max-width: 100%;
+
   }
-  #more-detail-btn:hover {
-      background-color: white;
-      cursor: pointer;
-      padding: 4px 35px;
+
+  .newsCard .cardImg {
+      display: none;
+  }
+
+  #eaNews,
+  #sportNews,
+  #apexNews,
+  #simsNews,
+  #swNews,
+  #f1News,
+  #battlefieldNews,
+  #nfsNews {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      padding: 1rem;
+  }
+  
+  .contenuti-finali {
+      flex-direction: column;
+      align-items: center;
+      height: 150px;
+  }
+
+  h2 {
+      text-align: center;
+  }
+
+  .contenitore {
+      background: url(images/contenitore2.jpg);
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .contenuti {
+      margin-top: 70%;
+      max-width: 100%;
+  }
+
+}
+
+
+#dragon-logo {
+  height: 100%;
+  width: 100%;
+}
+
+#img-desc-div {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+#img-desc-div-span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+}
+
+#cover-button {
+  padding: 15px 35px;
+  background-color: #fca00d;
+  color: white;
+  border: 0.1em solid #fca00d;
+  border-radius: 3px;
+  font-size: 20px;
+  transition: ease-in-out 0.1s;
+  font-size: 18px;
+}
+
+#cover-button:hover {
+  padding: 18px 38px;
+  cursor: pointer;
+}
+
+.button-container {
+  min-height: 60px;
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+  margin-top: 25px;
+  position: relative;
+}
+
+button:hover {
+  padding: 40px 15px 40px 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.sidebar {
+  display: block;
+
+  max-width: 27vw;
+  z-index: 1;
+  position: fixed;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  padding: 100px 30px 0 30px;
+  overflow-y: scroll;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar div {
+  border: 2px solid black;
+}
+
+.sidebar-hidden {
+  display: none;
+}
+
+#sidebar-content {
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#sidebar-header {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  min-width: auto;
+}
+
+.grid-header img {
+  min-width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.grid {
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.grid-item img {
+  width: 100%;
+  height: min-content;
+  border: 1px solid #ddd;
+
+  aspect-ratio: 1/1;
+}
+
+#spacing-div {
+  height: 100%;
+  background-color: white;
+  padding-bottom: 100px;
+}
+
+.sidebar-close-icon:hover {
+  cursor: pointer;
+  fill: #fca00d;
+}
+
+#sidebar-btn {
+  width: fit-content;
+  height: fit-content;
+  background-color: inherit;
+  border: none;
+}
+
+#sidebar-btn:hover {
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.flex-dir-row {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.flex-dir-column {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dropdown {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+  appearance: none;
+  display: inline-block;
+}
+
+#dropdown-arrow-left {
+  height: 0.1em;
+  width: 0.5em;
+  background-color: black;
+  transform: rotate(45deg);
+  margin-right: -4%;
+  position: relative;
+  transition: ease-in-out 0.2s;
+}
+
+#dropdown-arrow-right {
+  height: 0.1em;
+  width: 0.5em;
+  background-color: black;
+  transform: rotate(-45deg);
+  position: relative;
+  transition: ease-in-out 0.2s;
+}
+
+.arrow-div {
+  position: relative;
+  display: contents;
+}
+
+.dropbtn {
+  background-color: inherit;
+  color: black;
+  padding: 16px;
+  font-size: 17px;
+  border: none;
+  size: 0.5em;
+  justify-content: space-between;
+}
+
+.dropbtn:hover #dropdown-arrow-left {
+  height: 0.1em;
+  width: 0.5em;
+  background-color: black;
+  transform: rotate(-45deg);
+  background-color: #fca00d;
+}
+
+.dropbtn:hover #dropdown-arrow-right {
+  height: 0.1em;
+  width: 0.5em;
+  background-color: black;
+  transform: rotate(45deg);
+  background-color: #fca00d;
+}
+
+/* Hai usato due volte la proprietà display - display relative non è un valore valido */
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+
+.padding-first-drpdwn {
+  padding: 30px 35px 30px 35px;
+}
+
+.padding-other-drpdwn {
+  padding: 10px 25px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 0;
+  text-decoration: none;
+  display: block;
+  font-size: 15px;
+}
+
+.dropbtn:hover {
+  cursor: pointer;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  color: #fca00d;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: row;
+  top: 50px;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  color: #fca00d;
+  animation: 0.2s;
+  transition: all 0.2s;
+}
+
+.content-column a {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.drp-content-header {
+  font-weight: 700;
+  font-size: 15px;
+  border-bottom: 2px solid rgb(171, 169, 169);
+  padding-bottom: 5px;
+}
+
+.sidebar-btn:hover {
+  cursor: pointer;
+}
+
+#burger-sidebar-btn {
+  display: none;
+}
+
+/* Attenzione nelle media query non c'è bisogno di riscrivere tutto, solo le proprietà che cambiano, esempio il menu che scompare */
+@media screen and (max-width: 1024px) {
+  .dropdown {
+      display: none;
+  }
+
+  /* 
+    #sidebar{
+        display: none;
     }
-  
-  
-    #subscribe-div{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 50px;
-        padding-right: 130px;
+    #sidebar-btn {
+        display: none;
+    }
+   
+    #burger-sidebar-btn {
+        display: block;
     }
     
-    #learn-more-div{
+    .sidebar-close-icon:hover {
+        cursor: pointer;
+        fill: #FCA00D;
+    }
+    
+    .burger-sidebar-hidden {
+        display: none;
+    }
+
+    #burger-cont-header {
+        display: flex;
+      
+        flex: 0 1 auto;
+    }
+
+    #burger-sidebar {
+        display: block;
+
+        min-width: 35vw;
+        max-width: 35vw;
+        z-index: 1;
+        position: fixed;
+        background-color: white;
+        top: 0;
+        bottom: 0;
+        padding-top: 50px;
+        overflow-y: scroll;
+        //Aggiungi questa riga per abilitare lo scrolling 
+    }
+
+    #burger-content {
+        display: block;
+    }  */
+
+  /* .image-desc {
         display: flex;
         align-items: center;
+        flex-direction: column;
         justify-content: center;
-        height: 70px;
-        width: 100px;
-     
-    }
-  @media screen and (max-width: 768px) {
-    .container-card {
+        min-height: 100%;
+        min-width: 35%;
+    
+        position: relative;
+        overflow: hidden;
+        padding: 13% 70% 13% 10%;
+    } */
+}
+
+.games-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding: 0 8%;
+}
+
+
+#last-games-btn {
+  background-color: white;
+  border: 2px solid black;
+  color: black;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 40px;
+  cursor: pointer;
+  transition-duration: 0.1s;
+}
+
+#last-games-btn:hover {
+  background-color: white;
+  cursor: pointer;
+  padding: 18px 27px;
+}
+
+.text {
+  font-family: "Electronic Arts Text", Arial, Helvetica, sans-serif;
+  font-size: 35px;
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+.container-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  gap: 5rem;
+  aspect-ratio: 1/1;
+  transition: opacity 0.3s;
+}
+
+.card1 {
+  background-image: url("https://media.contentapi.ea.com/content/dam/gin/images/2023/09/ufc-5-keyart.jpg.adapt.crop1x1.767p.jpg");
+}
+
+.card2 {
+  background-image: url("https://media.contentapi.ea.com/content/dam/gin/images/2023/07/fc24.jpeg.adapt.crop1x1.767p.jpeg");
+}
+
+.card3 {
+  background-image: url("https://media.contentapi.ea.com/content/dam/gin/images/2023/02/f123-gametile-16x9.jpg.adapt.crop1x1.767p.jpg");
+}
+
+.card4 {
+  background-image: url("https://media.contentapi.ea.com/content/dam/gin/images/2022/10/nfs-unbound-1x1.png.adapt.crop1x1.767p.png");
+}
+
+.card5 {
+  background-image: url("https://media.contentapi.ea.com/content/dam/gin/images/2017/01/the-sims-4-keyart.jpg.adapt.crop1x1.767p.jpg");
+}
+
+.card6 {
+  background-image: url("https://media.contentapi.ea.com/content/dam/gin/images/2019/01/apex-legends-keyart.jpg.adapt.crop1x1.767p.jpg");
+}
+
+.logo {
+  max-width: 40%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.card:hover .logo {
+  transform: translateY(-50px);
+  opacity: 2;
+}
+
+.gradient {
+  background-color: black;
+  opacity: 0.8;
+  height: 100%;
+  width: 100%;
+}
+
+.gradient:hover {
+  background-image: linear-gradient(to right,
+          rgb(32, 0, 255, 0.5),
+          rgba(220, 0, 0, 0.5),
+          rgba(230, 38, 38, 0.5));
+  cursor: pointer;
+}
+
+.logo-p {
+  display: none;
+  color: white;
+  font-size: large;
+}
+
+.card:hover .logo-p {
+  display: block;
+  margin-top: 20px;
+  position: absolute;
+}
+
+
+
+
+
+
+.flex-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 30vh;
+}
+
+.size {
+  height: 100px;
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+
+#more-detail {
+  height: 100px;
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#more-detail-btn {
+  background-color: white;
+  border: 2px solid black;
+  color: black;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 40px;
+  cursor: pointer;
+  transition-duration: 0.1s;
+}
+
+#more-detail-btn:hover {
+  background-color: white;
+  cursor: pointer;
+  padding: 18px 27px;
+}
+
+
+#subscribe-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding-right: 175px;
+}
+
+#learn-more-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 100px;
+
+}
+
+@media screen and (max-width: 768px) {
+  .container-card {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(2, 1fr);
       justify-content: center;
       gap: 2rem;
-    }
   }
-  
-  
+}
